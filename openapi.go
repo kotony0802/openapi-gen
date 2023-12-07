@@ -8,8 +8,13 @@ import (
 )
 
 type OpenAPI struct {
+	openapi string
 	Info    info.Info
 	servers servers.Servers
 	Tags    tags.Tags
 	Paths   paths.Paths
+}
+
+func NewOpenAPI() *OpenAPI {
+	return &OpenAPI{openapi: "3.0.3"}
 }
